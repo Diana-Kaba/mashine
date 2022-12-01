@@ -57,18 +57,18 @@ CofeeMachine.prototype.run = function (drink) {
   //   this.time = 3000;
   // }
   switch (drink) {
-    case 1:
-      if (this.drink == "латте") {
-        this.time = 5000;
-      }
-    case 2:
-      if (this.drink == "еспресо") {
-        this.time = 3000;
-      }
-    case 3:
-      if (this.drink == "фраппе") {
-        this.time = 6000;
-      }
+    case "латте":
+      this.drink == "латте";
+      this.time = 5000;
+      break;
+    case "еспресо":
+      this.drink == "еспресо";
+      this.time = 3000;
+      break;
+    case "фраппе":
+      this.drink == "фраппе";
+      this.time = 6000;
+      break;
     default:
       alert("Такого напою немає!");
   }
@@ -93,18 +93,18 @@ Multivariate.prototype.run = function (dish) {
   if (this.dish != undefined) this.dish = dish;
   document.write("Приготування: " + this.dish + ". ");
   switch (dish) {
-    case 1:
-      if (this.dish == "суп") {
-        this.time = 8000;
-      }
-    case 2:
-      if (this.dish == "тушіння") {
-        this.time = 9000;
-      }
-    case 3:
-      if (this.dish == "випічка") {
-        this.time = 7000;
-      }
+    case "суп":
+      this.dish == "суп";
+      this.time == 8000;
+      break;
+    case "тушіння":
+      this.dish == "тушіння";
+      this.time = 9000;
+      break;
+    case "випічка":
+      this.dish == "випічка";
+      this.time = 7000;
+      break;
     default:
       alert("Такої страви немає!");
   }
