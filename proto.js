@@ -76,10 +76,10 @@ CofeeMachine.prototype.run = function (drink) {
 };
 
 let cofeeMachine = new CofeeMachine();
-cofeeMachine.run("латте");
-cofeeMachine.stop();
-cofeeMachine.run("еспресо");
-cofeeMachine.run("фраппе");
+// cofeeMachine.run("латте");
+// cofeeMachine.stop();
+// cofeeMachine.run("еспресо");
+// cofeeMachine.run("фраппе");
 
 function Multivariate() {
   this.dish = "суп";
@@ -112,7 +112,37 @@ Multivariate.prototype.run = function (dish) {
 };
 
 let multivariate = new Multivariate();
-multivariate.run("суп");
-multivariate.stop();
-multivariate.run("тушіння");
-multivariate.run("випічка");
+// multivariate.run("суп");
+// multivariate.stop();
+// multivariate.run("тушіння");
+// multivariate.run("випічка");
+
+let c = prompt("Яку машину будемо використовувати (кавамашину, мультиварку)?");
+if (c == "кавамашину") {
+  coffee();
+} else if (c == "мультиварку") {
+  cook();
+} else if (c == null || c == "Нічого") {
+  alert("До побачення, гарного дня!");
+}
+function coffee() {
+  let choiseCoffee = prompt("Що будемо робити (еспресо, латте, фраппе)?");
+  if (choiseCoffee == "еспресо") {
+    cofeeMachine.run("еспресо");
+  } else if (choiseCoffee == "латте") {
+    cofeeMachine.run("латте");
+  } else if (choiseCoffee == "фраппе") {
+    cofeeMachine.run("фраппе");
+  }
+}
+
+function cook() {
+  let choiseCook = prompt("Що будемо робити (суп, тушіння, випічка)?");
+  if (choiseCook == "суп") {
+    multivariate.run("суп");
+  } else if (choiseCook == "тушіння") {
+    multivariate.run("тушіння");
+  } else if (choiseCook == "випічка") {
+    multivariate.run("випічка");
+  }
+}
